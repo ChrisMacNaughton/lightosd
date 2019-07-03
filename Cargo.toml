@@ -1,0 +1,9 @@
+[package]
+name = "lightosd"
+version = "0.1.0"
+authors = ["Chris MacNaughton <chris@centaurisolutions.nl>"]
+edition = "2018"
+
+[dependencies]
+rocksdb = "0.12.2"
+structopt = "0.2.18"

@@ -1,0 +1,27 @@
+sudo: false
+dist: bionic
+
+language: rust
+
+cache:
+  cargo: true
+  apt: true
+
+rust:
+  - stable
+  - beta
+  - nightly
+
+addons:
+  apt:
+    packages:
+      # Dependencies for lightosd
+      - libclang-dev
+      - clang
+install:
+  - export PATH=$HOME/.cargo/bin:$PATH
+
+script:
+  - cargo test --all --verbose
+
+# TODO : enable functional builds
